@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário com validação</title>
+
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/variables.css">
+    <link rel="stylesheet" href="src/css/responsive.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <main class="container">
+        <div class="duvida">
+            <h1>ficou com dúvida?<br>nos mande uma mensagem!</h1>
+            <p>caso tenha ficado com qualquer dúvida basta nos mandar uma mensagem e entraremos em contato em menos de 24h.</p>
+        </div>
+
+        <form class="formulario">
+            <div>
+                <input type="text" id="nome" placeholder="Nome completo *" class="inputs required" oninput="nameValidate()">
+                <span class="campo-obrigatorio">campo obrigatório</span>
+            </div>
+
+            <div>
+                <input type="email" id="email" placeholder="Email *" class="inputs required" oninput="emailValidate()">
+                <span class="campo-obrigatorio">campo obrigatório</span>
+            </div>
+
+            <div>
+                <input type="number" id="numero" placeholder="Telefone *" class="inputs required" oninput="numberValidate()">
+                <span class="campo-obrigatorio">campo obrigatório</span>
+            </div>
+
+            <div>
+                <textarea id="message" placeholder="Mensagem *" class="inputs required" oninput="messageValidate()"></textarea>
+                <span class="campo-obrigatorio">campo obrigatório</span>
+            </div>
+            
+            <h2>*campos obrigatórios</h2>
+
+                <button type="submit">Enviar</button>
+            
+        </form>
+    </main>
+
+    <script src="index.js"></script>
+    
+</body>
+</html>
